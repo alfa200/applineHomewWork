@@ -16,8 +16,14 @@ public class Converter {
         Scanner in = new Scanner(System.in);
         double m = in.nextDouble(); //Сумма
         double n = in.nextDouble(); //Курс
-        DecimalFormat df = new DecimalFormat(".##");
-        System.out.println(df.format(m/n));
-        System.out.println();
+        if (n <= m) {
+            DecimalFormat df = new DecimalFormat(".##");
+            System.out.println(df.format(m/n));
+        } else {
+            DecimalFormat df = new DecimalFormat("0.##");
+            System.out.println(df.format(m/n));
+        }
+
+
     }
 }
